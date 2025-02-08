@@ -1,7 +1,7 @@
 Select O_TOTALPRICE as order_key,
 O_CLERK as customer_key,
 O_SHIPPRIORITY as order_status,
-O_ORDERDATE as total-price,
+O_ORDERDATE as total_price,
 O_COMMENT as order_date,
 O_ORDERSTATUS as order_priority,
 O_ORDERPRIORITY as clerk,

@@ -3,6 +3,6 @@ with src_region_cte as (
     R_COMMENT,
     R_NAME,
     R_REGIONKEY
-    FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION
+     FROM  {{ source('SNOWFLAKE_SOURCE', 'REGION') }} 
 )
 select * FROM src_region_cte

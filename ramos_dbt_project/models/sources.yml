@@ -1,0 +1,38 @@
+version: 2
+
+sources: 
+ - name: SNOWFLAKE_SOURCE
+   description: "Este é um banco de dados para SNOWFLAKE"
+   database: SNOWFLAKE_SAMPLE_DATA
+   schema: TPCH_SF1
+   tables: 
+    - name: CUSTOMER
+
+    - name: LINEITEM
+
+    - name: NATION
+
+    - name: ORDERS
+      freshness:
+       warn_after: {count: 100, period: day}
+       error_after: {count: 200, period: day}
+      loaded_at_fied: O_ORDENATE::timestamp
+
+    - name: PART
+
+    - name: PARTSUPP
+
+    - name: REGION
+      description: "Esta é a tabela de REGION"
+      identifier: REGION
+      columns:
+       - name: R_REGIONKEY
+       - name: R_NAME
+       - name: R_COMMENT
+
+    - name: SUPPLIER
+
+ - name: SNOWFLAKE_SOURCE_2
+
+
+   
