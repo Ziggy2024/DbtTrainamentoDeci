@@ -1,5 +1,12 @@
+{{
+    config(
+        materialized = 'ephemeral',
+    )
+
+
+}}
 select
     R_REGIONKEY as region_key,
     R_NAME as region_name,
     R_COMMENT as region_comment
-from {{ ref('srv_region') }}
+from {{ ref('src_region') }}
