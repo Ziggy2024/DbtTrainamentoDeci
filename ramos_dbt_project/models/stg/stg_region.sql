@@ -1,10 +1,3 @@
-{{
-    config(
-        materialized = 'ephemeral',
-    )
-
-
-}}
 select
     R_REGIONKEY as region_key,
     R_NAME as region_name,
