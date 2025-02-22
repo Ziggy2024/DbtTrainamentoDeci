@@ -39,5 +39,4 @@ models:
 seeds:
   ramos_dbt_project:
     +database: DEMO_DBT
-    +schema: seeds
-    +column_type: { year: varchar }     
+    +schema: seeds     
